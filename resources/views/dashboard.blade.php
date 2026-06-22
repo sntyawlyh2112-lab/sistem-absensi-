@@ -4,6 +4,10 @@
 
 <h2>Dashboard</h2>
 
+<a href="/logout" class="btn btn-danger mb-3">
+    Logout
+</a>
+
 <div class="row">
 
 <div class="col-md-3"><div class="card p-3">Mahasiswa <h3>{{ $jumlahMahasiswa }}</h3></div></div>
