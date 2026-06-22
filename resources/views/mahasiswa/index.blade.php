@@ -4,7 +4,14 @@
 
 <h2>Data Mahasiswa</h2>
 
-<a class="btn btn-success btn-sm mb-3" href="/mahasiswa/create">Tambah Mahasiswa</a>
+<a class="btn btn-success btn-sm mb-3" href="/mahasiswa/create">
+    Tambah Mahasiswa
+</a>
+
+<form action="/mahasiswa" method="GET" class="mb-3">
+        <input type="text" name="search" placeholder="Cari Nama Mahasiswa">
+        <button class="submit" class="btn btn-primary btn-sm">Cari</button>
+</form>
 
 <table class="table table-bordered">
 

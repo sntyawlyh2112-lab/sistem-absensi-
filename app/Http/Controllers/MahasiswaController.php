@@ -7,12 +7,21 @@ use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
 {
-    public function index()
-    {
-        $data = \App\Models\Mahasiswa::all();
+    public function index(Request $request)
+{
+    $search = $request->search;
 
-        return view('mahasiswa.index', compact('data'));
+    $data = Mahasiswa::query();
+
+    if ($search) {
+        $data->where('nama', 'like', '%' . $search . '%')
+             ->orWhere('nim', 'like', '%' . $search . '%');
     }
+
+    $data = $data->get();
+
+    return view('mahasiswa.index', compact('data'));
+}
 
     public function create()
     {
